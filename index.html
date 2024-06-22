@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="icon">
+                <img src="images/icone.png" alt="Ícone Padrão">
+            </div>
+            <h2>João Pereira</h2>
+            <p>
+                Sou estudante universitário e estagiário, e isso significa que preciso lidar com aulas,
+                trabalhos acadêmicos e compromissos profissionais todos os dias. Durante muito tempo,
+                tentei usar anotações em papéis e cadernos para me organizar, mas percebi que isso não era eficaz.
+            </p>
+            <p>
+                Foi então que decidi experimentar uma agenda virtual. Essa ferramenta se tornou essencial para mim.
+            </p>
+            <ul>
+                <li><a href="#">Calendário de Aulas</a></li>
+                <li><a href="#">Tarefas e Trabalhos</a></li>
+                <li><a href="#">Agendamento de Reuniões</a></li>
+                <li><a href="#">Notificações e Alertas</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Lista de Tarefas</h1>
+            <div class="task-tables">
+                <div class="table">
+                    <h2>Dia</h2>
+                    <ol id="day-tasks">
+                        <li>Estudar Matemática <button onclick="removeTask(this)" class="remove">Remover</button></li>
+                        <li>Reunião do estágio <button onclick="removeTask(this)" class="remove">Remover</button></li>
+                        <li>Escrever relatório de estágio <button onclick="removeTask(this)" class="remove">Remover</button></li>
+                        <li>Preparar apresentação de slides <button onclick="removeTask(this)" class="remove">Remover</button></li>
+                        <li>Leitura recomendada para aula de História <button onclick="removeTask(this)" class="remove">Remover</button></li>
+                    </ol>
+                    
+                    <input type="text" id="new-day-task" placeholder="Nova Tarefa">
+                    <button onclick="addTask('day')">Adicionar Tarefa</button>
+                </div>
+                <div class="table">
+                    <h2>Noite</h2>
+                    <ol id="night-tasks">
+                        <li>Academia <button onclick="removeTask(this)" class="remove">Remover</button></li>
+                        <li>Preparar Jantar <button onclick="removeTask(this)" class="remove">Remover</button></li>
+                        <li>Revisar para prova de Biologia <button onclick="removeTask(this)" class="remove">Remover</button></li>
+                        <li>Assistir a aula online de Inglês <button onclick="removeTask(this)" class="remove">Remover</button></li>
+                        <li>Ler capítulo do livro de Economia <button onclick="removeTask(this)" class="remove">Remover</button></li>
+                    </ol>
+                    
+                    <input type="text" id="new-night-task" placeholder="Nova Tarefa">
+                    <button onclick="addTask('night')">Adicionar Tarefa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
